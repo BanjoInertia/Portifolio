@@ -1,9 +1,15 @@
 .nav_bar {
-    height: 20vh;
+    height: 18vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 400px;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.visible {
+    opacity: 1;
 }
 
 button {
@@ -11,6 +17,6 @@ button {
     background: none;
     font-size: 40px;
     font-weight: 700;
-    color: white;
+    color: #fff;
     cursor: pointer;
 }

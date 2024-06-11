@@ -1,5 +1,8 @@
 import classes from './Section2.module.css'
-import img from '../../assets/envelope.png'
+import svghtml from '../../assets/html.svg'
+import svgcss from '../../assets/css.svg'
+import svgjavascript from '../../assets/javascript.svg'
+import svgreact from '../../assets/react.svg'
 
 export const Section2 = () => {
     return (
@@ -13,21 +16,21 @@ export const Section2 = () => {
             </p>
             <h1 className={classes.info_tittle}>LINGUAGENS</h1>
             <ul className={classes.jofe_container}>
-                <li>
-                    <img className={classes.img} src={img}/>
-                    <p className={classes.text}>abcd 1</p>
+                <li className={classes.jofe}>
+                    <img className={classes.img} src={svghtml}/>
+                    <p className={classes.text}>HTML 5</p>
                 </li>
-                <li>
-                    <img className={classes.img} src={img}/>
-                    <p className={classes.text}>abcd 1</p>
+                <li className={classes.jofe}>
+                    <img className={classes.img} src={svgcss}/>
+                    <p className={classes.text}>CSS 3</p>
                 </li>
-                <li>
-                    <img className={classes.img} src={img}/>
-                    <p className={classes.text}>abcd 1</p>
+                <li className={classes.jofe}>
+                    <img className={classes.img} src={svgjavascript}/>
+                    <p className={classes.text}>JavaScript</p>
                 </li>
-                <li>
-                    <img className={classes.img} src={img}/>
-                    <p className={classes.text}>abcd 1</p>
+                <li className={classes.jofe}>
+                    <img className={classes.img} src={svgreact}/>
+                    <p className={classes.text}>React</p>
                 </li>
             </ul>
         </div>
