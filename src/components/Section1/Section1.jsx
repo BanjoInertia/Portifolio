@@ -3,21 +3,29 @@ import classes from './Section1.module.css';
 
 export const Section1 = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const [changeColor, setChangeColor] = useState(false);
 
     useEffect(() => {
-        const timeout = setTimeout(() => {
+        const timeout1 = setTimeout(() => {
             setIsVisible(true);
         }, 1000);
 
-        return () => clearTimeout(timeout);
+        const timeout2 = setTimeout(() => {
+            setChangeColor(true);
+        }, 10000);
+
+        return () => {
+            clearTimeout(timeout1);
+            clearTimeout(timeout2);
+        };
     }, []);
 
     return (
-        <>
-            <div className={`${classes.tittle_container} ${isVisible ? classes.visible : ''}`}>
+        <div className={classes.container}>
+            <div className={`${classes.tittle_container} ${isVisible ? classes.visible : ''} ${changeColor ? classes.changeColor : ''}`}>
                 <p className={classes.tittle}>DESENVOLVEDOR FRONT-END</p>
                 <h1 className={classes.tittle_name}>MARCELO HENRIQUE</h1>
             </div>
-        </>
+        </div>
     );
 };

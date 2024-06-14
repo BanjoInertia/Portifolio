@@ -14,7 +14,7 @@ export const Section2 = () => {
 
             Sobre mim, gosto de jogos, principalmente os que envolvem uma história complexa e com personagens interessantes, alguns deles até me fazem refletir sobre a vida, e como ela deve ser seguida.
             </p>
-            <h1 className={classes.info_tittle}>LINGUAGENS</h1>
+            <h1 className={classes.info_tittle}>HABILIDADES</h1>
             <ul className={classes.jofe_container}>
                 <li className={classes.jofe}>
                     <img className={classes.img} src={svghtml}/>

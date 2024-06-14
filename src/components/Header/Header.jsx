@@ -8,7 +8,7 @@ export const Header = ({ scrollTo, aboutSection, projectsSection }) => {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setIsVisible(true);
-        }, 2000);
+        }, 10000);
 
         return () => clearTimeout(timeout);
     }, []);

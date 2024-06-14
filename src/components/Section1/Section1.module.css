@@ -6,29 +6,24 @@
     white-space: nowrap;
     font-weight: 700;
     opacity: 0;
-    color: transparent;
-    transition: opacity 2s step-start;
-
-    background-clip: text;
-    /* background: rgb(0,11,25);
-    background: linear-gradient(115deg, rgba(0,11,25,1) 0%, rgba(0,5,17,1) 50%, rgba(0,0,11,1) 100%); */
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
+    color: rgb(0,11,25);
+    transition: opacity 2s step-start, color 2s ease;
 }
 
 .visible {
     opacity: 1;
 }
 
+.changeColor {
+    color: rgb(255, 255, 255);
+}
+
 .tittle {
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 5px;
+    text-align: left !important;
 }
 
 .tittle_name {
-    font-size: 100px;
-    text-align: left;
+    font-size: 110px;
 }

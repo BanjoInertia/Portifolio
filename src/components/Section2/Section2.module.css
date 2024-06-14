@@ -4,14 +4,14 @@
     justify-content: center;
     word-wrap: break-word;
     padding: 0 20%;
-    gap: 30px;
 }
 
 .info_tittle {
     text-align: center;
     font-size: 50px;
     margin-top: 50px;
-    color: #1f54c5;
+    margin-bottom: 40px;
+    color: #394e7c;
 }
 
 .info_text {
@@ -20,7 +20,6 @@
     word-spacing: 1px;
     letter-spacing: 1px;
     line-height: 35px;
-    margin-bottom: 10px;
 }
 
 .jofe_container {
