@@ -1,14 +1,18 @@
 .projects_title {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
     font-size: 50px;
-    padding: 100px 0;
     color: #1f54c5;
+    height: 15vh;
 }
 
 .projects_container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 100px;
+    height: 85vh;
 }
 
 .projects {
@@ -44,7 +48,6 @@
     filter: blur(5px) brightness(50%);
 }
 
-
 .projects:hover .projects_text {
     opacity: 1;
     z-index: 1;
@@ -52,4 +55,46 @@
 
 .ecommerce {
     white-space: nowrap;
+}
+
+@media (max-width: 1300px) {
+    .projects {
+        height: 500px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .projects_container {
+        gap: 60px;
+    }
+
+    .projects {
+        height: 400px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 765px) {
+    .projects_container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .projects {
+        height: 300px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 650px) {
+    .projects_container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .projects {
+        height: 300px;
+        width: 350px;
+    }
 }

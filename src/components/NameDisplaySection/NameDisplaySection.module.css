@@ -27,3 +27,43 @@
 .tittle_name {
     font-size: 110px;
 }
+
+@media (max-width: 1200px) {
+    .tittle {
+        font-size: 30px;
+    }
+
+    .tittle_name {
+        font-size: 90px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .tittle {
+        font-size: 30px;
+    }
+
+    .tittle_name {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 750px) {
+    .tittle {
+        font-size: 25px;
+    }
+
+    .tittle_name {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 550px) {
+    .tittle {
+        font-size: 20px;
+    }
+
+    .tittle_name {
+        font-size: 40px;
+    }
+}

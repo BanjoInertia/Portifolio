@@ -23,3 +23,19 @@ button {
     color: #fff;
     cursor: pointer;
 }
+
+@media (max-width: 1000px) {
+    .nav_bar {
+        gap: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav_bar {
+        gap: 90px;
+    }
+
+    button {
+        font-size: 30px;
+    }
+}

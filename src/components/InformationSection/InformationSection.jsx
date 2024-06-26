@@ -15,22 +15,22 @@ export const InformationSection = () => {
             Sobre mim, gosto de jogos, principalmente os que envolvem uma história complexa e com personagens interessantes, alguns deles até me fazem refletir sobre a vida, e como ela deve ser seguida.
             </p>
             <h1 className={classes.info_tittle}>HABILIDADES</h1>
-            <ul className={classes.jofe_container}>
-                <li className={classes.jofe}>
-                    <img className={classes.img} src={svghtml}/>
-                    <p className={classes.text}>HTML 5</p>
+            <ul className={classes.abilities_container}>
+                <li className={classes.abilities}>
+                    <img className={classes.abilities_img} src={svghtml}/>
+                    <p className={classes.abilities_text}>HTML 5</p>
                 </li>
-                <li className={classes.jofe}>
-                    <img className={classes.img} src={svgcss}/>
-                    <p className={classes.text}>CSS 3</p>
+                <li className={classes.abilities}>
+                    <img className={classes.abilities_img} src={svgcss}/>
+                    <p className={classes.abilities_text}>CSS 3</p>
                 </li>
-                <li className={classes.jofe}>
-                    <img className={classes.img} src={svgjavascript}/>
-                    <p className={classes.text}>JavaScript</p>
+                <li className={classes.abilities}>
+                    <img className={classes.abilities_img} src={svgjavascript}/>
+                    <p className={classes.abilities_text}>JavaScript</p>
                 </li>
-                <li className={classes.jofe}>
-                    <img className={classes.img} src={svgreact}/>
-                    <p className={classes.text}>React</p>
+                <li className={classes.abilities}>
+                    <img className={classes.abilities_img} src={svgreact}/>
+                    <p className={classes.abilities_text}>React</p>
                 </li>
             </ul>
         </div>
