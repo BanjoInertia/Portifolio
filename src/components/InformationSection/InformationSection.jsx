@@ -1,10 +1,10 @@
-import classes from './Section2.module.css'
+import classes from './InformationSection.module.css'
 import svghtml from '../../assets/html.svg'
 import svgcss from '../../assets/css.svg'
 import svgjavascript from '../../assets/javascript.svg'
 import svgreact from '../../assets/react.svg'
 
-export const Section2 = () => {
+export const InformationSection = () => {
     return (
         <div className={classes.info_container}>
             <h1 className={classes.info_tittle}>SOBRE</h1>

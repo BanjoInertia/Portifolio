@@ -16,8 +16,8 @@ export const Header = ({ scrollTo, aboutSection, projectsSection }) => {
     return (
         <div>
             <ul className={`${classes.nav_bar} ${isVisible ? classes.visible : ''}`}>
-                <button onClick={() => scrollTo(aboutSection)}>SOBRE</button>
-                <button onClick={() => scrollTo(projectsSection)}>PROJETOS</button>
+                <li><button onClick={() => scrollTo(aboutSection)}>SOBRE</button></li>
+                <li><button onClick={() => scrollTo(projectsSection)}>PROJETOS</button></li>
             </ul>
         </div>
     );

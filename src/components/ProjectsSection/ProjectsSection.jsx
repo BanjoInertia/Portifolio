@@ -1,19 +1,19 @@
-import classes from './Section3.module.css'
-import img1 from '../../assets/Semtulo.png'
-import img2 from '../../assets/jofe.png'
+import classes from './ProjectsSection.module.css'
+import StoreImage from '../../assets/StoreImage.png'
+import InfomonImage from '../../assets/InfomonImage.png'
 
-export const Section3 = () => {
+export const ProjectsSection = () => {
     return (
         <>
             <h1 className={classes.projects_title}>PROJETOS</h1>
             <div className={classes.projects_container}>
-                <div className={classes.projects}>
-                    <img src={img1} className={classes.projects_img} />
+                <a href='https://main--store-inertia.netlify.app' target='_blank' className={classes.projects}>
+                    <img src={StoreImage} className={classes.projects_img} />
                     <span className={classes.projects_text}>STORE é um <span className={classes.ecommerce}>e-commerce</span> que vende produtos ficticios.</span>
 
-                </div>
+                </a>
                 <a href='https://infomon-two.vercel.app' target='_blank' className={classes.projects}>
-                    <img src={img2} className={classes.projects_img} />
+                    <img src={InfomonImage} className={classes.projects_img} />
                     <span className={classes.projects_text}>Infomon é um site de consulta de pokemons.</span>
                 </a>
             </div>

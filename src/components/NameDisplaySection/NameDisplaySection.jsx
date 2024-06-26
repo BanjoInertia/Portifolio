@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import classes from './Section1.module.css';
+import classes from './NameDisplaySection.module.css';
 
-export const Section1 = () => {
+export const NameDisplaySection = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [changeColor, setChangeColor] = useState(false);
 
