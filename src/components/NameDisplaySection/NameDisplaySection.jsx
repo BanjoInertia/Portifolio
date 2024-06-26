@@ -8,11 +8,11 @@ export const NameDisplaySection = () => {
     useEffect(() => {
         const timeout1 = setTimeout(() => {
             setIsVisible(true);
-        }, 2000);
+        }, 1000);
 
         const timeout2 = setTimeout(() => {
             setChangeColor(true);
-        }, 11000);
+        }, 10000);
 
         return () => {
             clearTimeout(timeout1);
