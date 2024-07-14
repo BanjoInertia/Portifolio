@@ -9,7 +9,7 @@ export const NameDisplaySection = ({ isVisible, videoLoaded }) => {
         if (videoLoaded) {
             const timeout1 = setTimeout(() => {
                 setChangeColor(true);
-            }, 9000); // 9 seconds, after the 10 seconds timeout
+            }, 1000);
 
             return () => clearTimeout(timeout1);
         }
