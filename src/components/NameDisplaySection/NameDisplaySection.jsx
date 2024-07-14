@@ -1,33 +1,33 @@
-import { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
 import classes from './NameDisplaySection.module.css';
 
-export const NameDisplaySection = ({ isVisible, videoLoaded }) => {
+export const NameDisplaySection = ({ videoLoaded }) => {
+    const [isVisible, setIsVisible] = useState(false);
     const [changeColor, setChangeColor] = useState(false);
 
     useEffect(() => {
         if (videoLoaded) {
             const timeout1 = setTimeout(() => {
-                setChangeColor(true);
+                setIsVisible(true);
             }, 1000);
 
-            return () => clearTimeout(timeout1);
+            const timeout2 = setTimeout(() => {
+                setChangeColor(true);
+            }, 10000);
+
+            return () => {
+                clearTimeout(timeout1);
+                clearTimeout(timeout2);
+            };
         }
     }, [videoLoaded]);
 
     return (
         <div className={classes.container}>
-            <div 
-                className={`${classes.tittle_container} ${isVisible ? classes.visible : ''} ${changeColor ? classes.changeColor : ''}`}
-            >
+            <div className={`${classes.tittle_container} ${isVisible ? classes.visible : ''} ${changeColor ? classes.changeColor : ''}`}>
                 <p className={classes.tittle}>DESENVOLVEDOR FRONT-END</p>
                 <h1 className={classes.tittle_name}>MARCELO HENRIQUE</h1>
             </div>
         </div>
     );
-};
-
-NameDisplaySection.propTypes = {
-    isVisible: PropTypes.bool.isRequired,
-    videoLoaded: PropTypes.bool.isRequired
 };
