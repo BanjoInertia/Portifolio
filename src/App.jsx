@@ -8,10 +8,21 @@ import backgroundVideo from './assets/video.mp4';
 
 function App() {
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const scrollTo = (section) => {
     document.querySelector(section).scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    if (videoLoaded) {
+      const timeout = setTimeout(() => {
+        setIsVisible(true);
+      }, 10000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [videoLoaded]);
 
   return (
     <>
@@ -31,6 +42,10 @@ function App() {
             videoLoaded={videoLoaded} 
           />
           <NameDisplaySection videoLoaded={videoLoaded} />
+          <button 
+            className={`next_arrow ${isVisible ? 'visible' : ''}`} 
+            onClick={() => scrollTo('#section2')} 
+          />
         </section>
       </div>
 
@@ -38,7 +53,7 @@ function App() {
         <section className='section_2'>
           <InformationSection />
           <button 
-            className='next_arrow' 
+            className={`next_arrow ${isVisible ? 'visible' : ''}`} 
             onClick={() => scrollTo('#section3')} 
           />
         </section>
