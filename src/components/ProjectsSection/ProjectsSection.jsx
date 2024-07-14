@@ -14,7 +14,7 @@ export const ProjectsSection = () => {
                 </a>
                 <a href='https://infomon-two.vercel.app' target='_blank' className={classes.projects}>
                     <img src={InfomonImage} className={classes.projects_img} />
-                    <span className={classes.projects_text}>Infomon é um site de consulta de pokemons.</span>
+                    <span className={classes.projects_text}>Infomon é um site de consulta de pokémons.</span>
                 </a>
             </div>
         </>

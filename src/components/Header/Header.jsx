@@ -1,30 +1,35 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import classes from './Header.module.css';
 
-export const Header = ({ scrollTo, aboutSection, projectsSection }) => {
-    const [isVisible, setIsVisible] = useState(false);
+export const Header = ({ scrollTo, aboutSection, projectsSection, videoLoaded }) => {
+  const [isVisible, setIsVisible] = useState(false);
 
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            setIsVisible(true);
-        }, 10000);
+  useEffect(() => {
+    let timeout;
 
-        return () => clearTimeout(timeout);
-    }, []);
+    if (videoLoaded) {
+      timeout = setTimeout(() => {
+        setIsVisible(true);
+      }, 10000); // 10 seconds timeout
+    }
 
-    return (
-        <div>
-            <ul className={`${classes.nav_bar} ${isVisible ? classes.visible : ''}`}>
-                <li><button onClick={() => scrollTo(aboutSection)}>SOBRE</button></li>
-                <li><button onClick={() => scrollTo(projectsSection)}>PROJETOS</button></li>
-            </ul>
-        </div>
-    );
+    return () => clearTimeout(timeout);
+  }, [videoLoaded]);
+
+  return (
+    <div>
+      <ul className={`${classes.nav_bar} ${isVisible ? classes.visible : ''}`}>
+        <li><button onClick={() => scrollTo(aboutSection)}>SOBRE</button></li>
+        <li><button onClick={() => scrollTo(projectsSection)}>PROJETOS</button></li>
+      </ul>
+    </div>
+  );
 };
 
 Header.propTypes = {
-    scrollTo: PropTypes.func.isRequired,
-    aboutSection: PropTypes.string.isRequired,
-    projectsSection: PropTypes.string.isRequired
+  scrollTo: PropTypes.func.isRequired,
+  aboutSection: PropTypes.string.isRequired,
+  projectsSection: PropTypes.string.isRequired,
+  videoLoaded: PropTypes.bool.isRequired
 };
