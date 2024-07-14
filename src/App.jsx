@@ -16,8 +16,11 @@ function App() {
 
   useEffect(() => {
     if (videoLoaded) {
-      // Optionally, handle visibility change after a certain condition
-      setIsVisible(true);
+      const timeout = setTimeout(() => {
+        setIsVisible(true);
+      }, 10000);
+
+      return () => clearTimeout(timeout);
     }
   }, [videoLoaded]);
 
@@ -31,7 +34,6 @@ function App() {
             autoPlay 
             muted 
             onLoadedData={() => setVideoLoaded(true)} 
-            style={{ width: '100%', height: 'auto' }} // Ensure video fits container
           />
           <Header 
             scrollTo={scrollTo} 
