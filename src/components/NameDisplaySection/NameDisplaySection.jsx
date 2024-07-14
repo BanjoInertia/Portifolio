@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import classes from './NameDisplaySection.module.css';
 
@@ -30,4 +31,9 @@ export const NameDisplaySection = ({ videoLoaded }) => {
             </div>
         </div>
     );
+};
+
+// PropTypes validation
+NameDisplaySection.propTypes = {
+    videoLoaded: PropTypes.bool.isRequired,
 };
