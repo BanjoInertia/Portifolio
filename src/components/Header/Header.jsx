@@ -2,16 +2,18 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classes from './Header.module.css';
 
-export const Header = ({ scrollTo, aboutSection, projectsSection }) => {
+export const Header = ({ scrollTo, aboutSection, projectsSection, videoLoaded }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        const timeout = setTimeout(() => {
-            setIsVisible(true);
-        }, 10000);
-
-        return () => clearTimeout(timeout);
-    }, []);
+        if (videoLoaded) {
+            const timeout = setTimeout(() => {
+                setIsVisible(true);
+            }, 10000);
+    
+            return () => clearTimeout(timeout);
+        }
+    }, [videoLoaded]);
 
     return (
         <div>
