@@ -7,14 +7,17 @@ export const NameDisplaySection = ({ videoLoaded }) => {
 
     useEffect(() => {
         if (videoLoaded) {
+            // Show title container after 1 second
             const timeout1 = setTimeout(() => {
                 setIsVisible(true);
             }, 1000);
 
+            // Change color after 10 seconds
             const timeout2 = setTimeout(() => {
                 setChangeColor(true);
             }, 10000);
 
+            // Cleanup timeouts
             return () => {
                 clearTimeout(timeout1);
                 clearTimeout(timeout2);
