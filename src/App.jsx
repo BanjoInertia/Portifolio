@@ -16,11 +16,11 @@ function App() {
 
   useEffect(() => {
     if (videoLoaded) {
-      const timeout = setTimeout(() => {
+      const timeout1 = setTimeout(() => {
         setIsVisible(true);
       }, 10000);
 
-      return () => clearTimeout(timeout);
+      return () => clearTimeout(timeout1);
     }
   }, [videoLoaded]);
 
@@ -41,7 +41,10 @@ function App() {
             projectsSection="#section3" 
             videoLoaded={videoLoaded} 
           />
-          <NameDisplaySection />
+          <NameDisplaySection 
+            isVisible={isVisible}
+            videoLoaded={videoLoaded}
+          />
           <button 
             className={`next_arrow ${isVisible ? 'visible' : ''}`} 
             onClick={() => scrollTo('#section2')} 
