@@ -3,6 +3,7 @@ import svghtml from '../../assets/html.svg'
 import svgcss from '../../assets/css.svg'
 import svgjavascript from '../../assets/javascript.svg'
 import svgreact from '../../assets/react.svg'
+import svgvue from '../../assets/vue.svg'
 
 export const InformationSection = () => {
     return (
@@ -31,6 +32,10 @@ export const InformationSection = () => {
                 <li className={classes.abilities}>
                     <img className={classes.abilities_img} src={svgreact}/>
                     <p className={classes.abilities_text}>React</p>
+                </li>
+                <li className={classes.abilities}>
+                    <img className={classes.abilities_img} src={svgvue}/>
+                    <p className={classes.abilities_text}>Vue</p>
                 </li>
             </ul>
         </div>
