@@ -9,10 +9,11 @@
 
 .projects_container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 100px;
     height: 85vh;
+    gap: 50px;
+    padding: 0 50px;
 }
 
 .projects {
@@ -58,6 +59,11 @@
 }
 
 @media (max-width: 1300px) {
+    .projects_container {
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
     .projects {
         height: 500px;
         width: 400px;
@@ -66,7 +72,7 @@
 
 @media (max-width: 1050px) {
     .projects_container {
-        gap: 60px;
+        gap: 20px;
     }
 
     .projects {
@@ -83,7 +89,16 @@
 
     .projects {
         height: 300px;
-        width: 500px;
+        width: 350px;
+    }
+
+    .projects_title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        color: #1f54c5;
+        height: 10vh;
     }
 }
 

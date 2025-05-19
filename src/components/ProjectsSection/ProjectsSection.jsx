@@ -1,6 +1,7 @@
 import classes from './ProjectsSection.module.css'
 import StoreImage from '../../assets/StoreImage.png'
 import InfomonImage from '../../assets/InfomonImage.png'
+import KnowYourFanImage from '../../assets/KnowYourFanImage.png'
 
 export const ProjectsSection = () => {
     return (
@@ -10,11 +11,14 @@ export const ProjectsSection = () => {
                 <a href='https://main--store-inertia.netlify.app' target='_blank' className={classes.projects}>
                     <img src={StoreImage} className={classes.projects_img} />
                     <span className={classes.projects_text}>STORE é um <span className={classes.ecommerce}>e-commerce</span> que vende produtos ficticios.</span>
-
                 </a>
                 <a href='https://infomon-two.vercel.app' target='_blank' className={classes.projects}>
                     <img src={InfomonImage} className={classes.projects_img} />
                     <span className={classes.projects_text}>Infomon é um site de consulta de pokémons.</span>
+                </a>
+                <a href='https://know-your-fan-frontend.onrender.com' target='_blank' className={classes.projects}>
+                    <img src={KnowYourFanImage} className={classes.projects_img} />
+                    <span className={classes.projects_text}>Know Your Fan da FURIA <br/>(teste técnico)</span>
                 </a>
             </div>
         </>
